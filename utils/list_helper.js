@@ -1,5 +1,9 @@
 const dummy = (blogs) => {
-	return(Array.isArray(blogs) ? 1 : false);
-}
+	return Array.isArray(blogs) ? 1 : false;
+};
 
-module.exports = { dummy }
+const totalLikes = (blogs) => {
+	return blogs.reduce((acc, post) => acc + post.likes, 0);
+};
+
+module.exports = { dummy, totalLikes };
